@@ -8,8 +8,9 @@ YELLOW = "\033[33m"
 BLUE = "\033[34m"
 RESET = "\033[0m"
 
-# Run over all files recursively
-if (__name__ == "__main__"): # to avoid running every time it is imported
+
+if (__name__ == "__main__"):  # to avoid running every time it is imported
+    # Run over all files recursively
     for dirpath, dirnames, filenames in walk('python'):
         """
         dirpath : str -> a string with the path of current directory, like "python/projects"
@@ -17,7 +18,14 @@ if (__name__ == "__main__"): # to avoid running every time it is imported
         filenames : list[str] -> a list of all files in current directory
         """
         for filename in filenames:
-            if (filename[-3:] != '.py' or filename == '__init__.py' or filename == 'test.py'): continue
+            if (
+                filename[-3:] != '.py' or # Ignore all files that are not python files
+                # Ignore some specific files
+                filename == '__init__.py' or 
+                filename == 'test.py' or 
+                filename == 'test_runtime.py'
+            ):
+                continue
 
             try:
                 import_path = dirpath.replace('\\', '.') + '.' + filename[:-3]
