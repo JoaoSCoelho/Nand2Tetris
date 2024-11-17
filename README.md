@@ -12,4 +12,15 @@ To run the tests, in the root directory run the command:
 ```bash
 $ python -m python.test
 ```
+
+To run the runtime tests, in the root directory run the command:
+```bash
+$ python -m python.test_runtime
+```
 *OBS: Is necessary to have python installed on your machine.*
+
+# Gates
+
+You can find the gates implementations in the `projects` directory and the `python` directory.
+
+You can see the documentation for some gates on `docs` directory (*probably the images will be in portuguese*).
