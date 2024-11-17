@@ -1,5 +1,3 @@
-
-
 from typing import Literal
 from .test import GREEN, RESET, RED
 
@@ -18,8 +16,18 @@ def nand(a: Literal[0, 1], b: Literal[0, 1]) -> Literal[0, 1]:
     return not (a and b) # ¬(a ∧ b)
 
 def __test__(shouldPrint: bool):
+    """
+    Run local tests on NAND gate.
+    
+    Parameters:
+    shouldPrint (bool): If True, print the result.
+    
+    Returns:
+    None
+    """
+    
     try:
-        assert nand(0, 0) == 1
+        assert nand(0, 0) == 1 # Throws a AssertionError if the test fails
         assert nand(0, 1) == 1
         assert nand(1, 0) == 1
         assert nand(1, 1) == 0
@@ -31,5 +39,5 @@ def __test__(shouldPrint: bool):
 
 if (__name__ == "__main__"):
     # Making local tests
-    __test__(True)    
+    __test__(True)
 
