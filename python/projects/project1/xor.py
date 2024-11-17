@@ -5,10 +5,10 @@ from ...nand import nand
 
 def xor(a: Literal[1, 0], b: Literal[1, 0]) -> Literal[1, 0]:
     """Truthy table:\\
-    a | b | xor(a, b)
-    0 | 0 | 0 
-    0 | 1 | 1
-    1 | 0 | 1
+    a | b | xor(a, b)\\
+    0 | 0 | 0 \\
+    0 | 1 | 1\\
+    1 | 0 | 1\\
     1 | 1 | 0
     """
     

@@ -66,3 +66,21 @@ We can make a XOR gate with NANDs like this:
 (a ↑ ¬b) ↑ (¬a ↑ b)
 
 but it's not the best way to do it.
+
+## MUX
+
+Truthy table:
+
+| a   | b   | sel | mux(a, b, sel) |
+| --- | --- | --- | -------------- |
+| 0   | 0   | 0   | 0              |
+| 0   | 1   | 0   | 0              |
+| 1   | 0   | 0   | 1              |
+| 1   | 1   | 0   | 1              |
+| 0   | 0   | 1   | 0              |
+| 0   | 1   | 1   | 1              |
+| 1   | 0   | 1   | 0              |
+| 1   | 1   | 1   | 1              |
+
+![MUX_studies](project1/MUX_studies.jpg)
+![MUX_studies2](project1/MUX_studies2.jpg)
