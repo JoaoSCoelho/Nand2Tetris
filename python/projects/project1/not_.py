@@ -14,7 +14,7 @@ def not_(a: Literal[0, 1]) -> Literal[0, 1]:
     """
     return nand(a, a) # ¬(a ∧ a)
 
-def __test__(shouldPrint: bool):
+def __test__(shouldPrint: bool = False):
     try:
         assert not_(0) == 1
         assert not_(1) == 0

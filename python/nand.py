@@ -15,7 +15,7 @@ def nand(a: Literal[0, 1], b: Literal[0, 1]) -> Literal[0, 1]:
     """   
     return not (a and b) # ¬(a ∧ b)
 
-def __test__(shouldPrint: bool):
+def __test__(shouldPrint: bool = False):
     """
     Run local tests on NAND gate.
     

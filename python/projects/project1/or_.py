@@ -14,7 +14,7 @@ def or_(a: Literal[1, 0], b: Literal[1, 0]) -> Literal[1, 0]:
     
     return not_(and_(not_(a), not_(b))) # ¬(¬a ∧ ¬b)
 
-def __test__(shouldPrint: bool):
+def __test__(shouldPrint: bool = False):
     try:
         assert or_(0, 0) == 0
         assert or_(0, 1) == 1
