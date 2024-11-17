@@ -1,5 +1,5 @@
 from os import walk
-import importlib
+from importlib import import_module
 
 # Códigos ANSI para cores
 RED = "\033[31m"
@@ -28,14 +28,12 @@ if (__name__ == "__main__"):  # to avoid running every time it is imported
                 continue
 
             try:
-                import_path = dirpath.replace('\\', '.') + '.' + filename[:-3]
-                module = importlib.import_module(import_path)
-                
+                import_path = dirpath.replace('\\', '.').replace('/', '.') + '.' + filename[:-3]
+                module = import_module(import_path)
+
                 try:
                     module.__test__(True)
                 except Exception as e:
                     print(f'Erro {e} no arquivo {import_path}')
             except:
                 pass
-    
-    
